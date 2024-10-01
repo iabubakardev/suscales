@@ -321,6 +321,11 @@
         var email = document.getElementById('email').value;
         var message = document.getElementById('message').value;
 
+		// Validate form data
+		if (name === "" || email === "" || message === "") {
+			alert("Please fill in all the required fields (Name, Email, and Message).");
+			return; // Stop the function if validation fails
+		}
         // Prepare the data to be sent
         var templateParams = {
             name: name,
